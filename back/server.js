@@ -9,6 +9,7 @@ const server = express();
 
 // adding middleware
 mongoose.Promise = global.Promise;
+server.use(express.json());
 
 // setting up the database
 mongoose.connect('mongodb://localhost:27017/auth', { useNewUrlParser: true });
